@@ -8,9 +8,7 @@ add(2 + 2);
 
 const add = (num1: number, num2: number): number => num1 + num2;
 
-
 // object ---> function ---> Method
-
 
 const poorUser = {
   name: "nahid",
@@ -20,10 +18,10 @@ const poorUser = {
   },
 };
 
+//define explicitly in callback function
+const arr: number[] = [1, 5, 3, 6];
 
-
-
-
+const newArray: number[] = arr.map((num: number): number => num * num);
 
 // {
 //   //Learning function

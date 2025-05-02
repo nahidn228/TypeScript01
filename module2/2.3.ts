@@ -1,5 +1,5 @@
 {
-  // generic type
+  // generic type with (alias)
 
   // type GenericArray<params> = Array<params>; //Dynamic generic type
   type GenericArray<T> = Array<T>; //Dynamic generic type
@@ -31,7 +31,18 @@
   const human: GenericTuple<string, string> = ["Nahid", "Hasan"];
   const human1: GenericTuple<string, number> = ["Nahid", 26];
 
-  const userWithId: GenericTuple<number, { name: string; email: string }> = [
+  // const userWithId: GenericTuple<number, { name: string; email: string }> = [
+  //   1234,
+  //   { name: "nahid", email: "nahid@gmail.com" },
+  // ];
+
+  //simplified
+
+  interface User {
+    name: string;
+    email: string;
+  }
+  const userWithId: GenericTuple<number, User> = [
     1234,
     { name: "nahid", email: "nahid@gmail.com" },
   ];
